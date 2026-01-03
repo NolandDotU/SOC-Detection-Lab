@@ -1,0 +1,11 @@
+# PHASE 2
+
+## OBJECTIVE
+Detecting scanner from attacker and detecting repeated unauthorized SSH login attempts.
+
+**_______________________**
+## Attack Simulation
+### From Kali Linux
+- `nmap -A -T4 Private/Public-IP-of-Ubuntu-Victim`
+- `hydra -l ubuntu -p testpass123 ssh://Victim-IP
+**_______________________**
