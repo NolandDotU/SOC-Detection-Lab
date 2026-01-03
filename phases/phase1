@@ -32,4 +32,5 @@ move to **Victim POV** for preparing the Wazuh Agent
 `sudo systemctl enable wazuh-agent`
 `sudo systemctl start wazuh-agent`
 
-if there's no error, you should be seeing "Total Agents: 1" on your Wazuh Dashboard, means we successed.
+if there's no error, you should be seeing "Total Agents: 1" on your Wazuh Dashboard, means we successed and we can go to setup the Suricata as a censor that detects networks attacks and forward it to the Wazuh
+1. **Install Suricata**
