@@ -1,61 +1,25 @@
-# SOC Brute-Force Attack Simulation and SOC Detection Lab
+# Mini SOC Lab - Wazuh on AWS
 
-## **Overview**
-This project demonstrates and **SSH brute-force attack simulation by Hydra or any brute-force tool** in a controlled lab enviroment and its **Detection from SOC Perspective**.
+**Role1:** SOC Analyst (Blue Team)
+**Role2:** Attacker on Kali Linux (Red Team)
+**Focus:** Detection, Log Analysis, Incident Triage
+**Platform:** AWS EC2 and Kali Linux as Attacker
+**SIEM:** Wazuh (ELK Stack) & Suricata as a sensor
 
-**The Goal:**
-- Simulate a realistic basic attacker technique
-- Generate authentication telemetry
-- Validate that brute-force activity is logged and detectable
-- Communicate findings in SOC-Friendly language
+_______________________________________________
+## Overview
+This repository demonstates a realistic SOC Lab built on AWS using Wazuh as a detecter and analyzer for real attack activity such as _nmap_ or _curl_
 
-===============================================
+The Project Simulates:
+- An attacker performing reconnaissence attacks.
+- A Linux server as a monitored endpoint.
+- A SIEM will perfoming detection on the attack and start alerting based on what Suricata detect.
+_______________________________________________
+## Components
+- **Wazuh Manager:** SIEM, Detection, Dashboard
+- **Ubuntu Victim:** Monitored endpoint
+- **Kali Linux:** Attack Simulation
+- **AWS EC2:** Cloud Server
+_______________________________________________
 
-## **Lab Architecture**
-**Attacker (Red Team POV)**
-- Kali Linux (my own laptop)
-- Tool: Hydra
-
-**Targer (Defender POV)**
-- Ubuntu 24.04 Server (Using AWS EC2)
-- OpenSSH
-- Log source: `/var/log/auth.log`
-- User: `evilcorp` (non-privilaged)
-
-Kali (Attacker)
-|
-|SSH Brute Force with Hydra from port 22 
-|
-AWS EC2 UBuntu Server
-|
-|auth.log. So this is where the monitoring is, currently manual because depending automation and alerting implementation
-|
-SOC/SIEM Detection
-
-===============================================
-
-**Talk about ATTACK POV**
-So here i use Hydra to Brute-force a SSH using just a simple password like on the screenshot using this command
-`hydra -l evilcorp -p Password123 ssh://15.134.85.195`
-So the objective/mission is to gain unauthorize SSH access by guessing credentials and generarte a multiple failed login attempts so we can see it on auth.log.
-
-**Switch into DEFEND POV**
-after the attacker did bruteforce or some failed attempt it will shows a log like this exemple (we can see it too on auth-log-failed.png screenshot)
-`Failed password for evilcorp from 182.8.193.159 port 33308 ssh2`
-
-
-**===DISCLAIMER===**
-This project is created for **educational only and defensive purposes only.**
-All attack were just performed by my own.
-I did this just showing my skill and demonstrate it for writeing up without risking others
-DO NOT attempt these techniques on systems without permission because you can get caught and that's really unethically.
-
-**SKILL DEMONSTRATED**
-- SOC Monitoring
-- Log Correlation
-- SSH Security Analyst
-- MITRE ATT&CK Framework
-- Incident Triage
-
-  Thanks for reading this hopefully it useful for knowledges
-  see u soon
+Okay, there will be a 4 phases that will be doing they're will be on each phases's folder **Disclaimer** that this project is just for educational and defensive security purposes only. All attacks were executed in a controlled lab enviroment of my own.
