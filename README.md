@@ -27,3 +27,23 @@ _______________________________________________
 _______________________________________________
 
 Okay, there will be a 4 phases that will be doing they're will be on each phases's folder **Disclaimer** that this project is just for educational and defensive security purposes only. All attacks were executed in a controlled lab enviroment of my own.
+
+## Project Status & Roadmap
+
+This project is currently in an **active development phase**.
+
+### Implemented
+- SIEM deployment using Wazuh
+- Endpoint log collection via Wazuh Agent
+- Network-based intrusion detection using Suricata
+- Detection of reconnaissance and scanning activity
+- SOC-style alert analysis and documentation
+
+### Planned Enhancements
+- Wazuh Active Response (automatic IP blocking)
+- Firewall-based mitigation (temporary bans)
+- Custom Wazuh correlation rules
+- Additional attack scenarios
+
+This repository will continue to evolve as new detections and response mechanisms are implemented.
+
