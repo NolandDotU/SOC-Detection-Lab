@@ -1,9 +1,13 @@
 # Mini SOC Lab - Wazuh on AWS
 
 **Role1:** SOC Analyst (Blue Team)
+
 **Role2:** Attacker on Kali Linux (Red Team)
+
 **Focus:** Detection, Log Analysis, Incident Triage
+
 **Platform:** AWS EC2 and Kali Linux as Attacker
+
 **SIEM:** Wazuh (ELK Stack) & Suricata as a sensor
 
 _______________________________________________
